@@ -1,0 +1,26 @@
+:root {
+
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+
+.main-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.nav-bar {
+    display: flex;
+}

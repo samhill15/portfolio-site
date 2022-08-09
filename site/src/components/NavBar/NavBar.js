@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NavBar() {
   return (
-    <nav>
+    <nav className=".navbar">
       <div className="logo">SH</div>
       <ul>
         <li><a href="#">Home</a></li>
