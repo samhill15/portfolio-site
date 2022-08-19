@@ -1,11 +1,13 @@
 :root {
-
+    --main-font: 'Catamaran', sans-serif;
 }
 
-body {
-    background-color: #000;
-    color: #fff;
+/* General Styles */
+
+* {
+    font-family: var(--main-font);
 }
+
 
 li {
     list-style-type: none;
@@ -13,6 +15,11 @@ li {
     margin-right: 1rem;
 }
 
+svg {
+    height: 30px;
+}
+
+/* Container Styles */
 
 .main-container {
     padding: 2rem;
@@ -21,6 +28,32 @@ li {
     gap: 3.5rem;
 }
 
-.nav-bar {
+/* navbar styles */
+
+.navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .navbar > * {
+        display: inline-block;
+    }
+
+    .nav-collapse-btn {
+        display: none;
+    }
+
+@media  screen and (max-width: 500px) {
+    .nav-items {
+        display: none;
+    }
+
+    .nav-collapse-btn {
+        display: inline-block;
+    }
+
+    .nav-items-active {
+        display: block;
+    }
 }
