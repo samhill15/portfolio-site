@@ -12,13 +12,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="main-container">
+    <div>
       <NavBar />
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <div className="main-container">
+        <Header />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
