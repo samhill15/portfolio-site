@@ -103,6 +103,16 @@ section > h2 {
 
 /* Contact Section */
 
+#contact-form {
+    display: grid;
+    gap: 0.5rem;
+}
+
+    .form-input {
+        display: flex;
+        flex-direction: column;
+    }
+
 /* Footer */
 
 footer {
