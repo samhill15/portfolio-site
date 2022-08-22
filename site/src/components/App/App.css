@@ -38,9 +38,6 @@ svg {
     padding: 1.5rem;
 }
 
-    .navbar > * {
-        display: inline-block;
-    }
 
     .nav-collapse-btn {
         display: none;
