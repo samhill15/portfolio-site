@@ -19,13 +19,24 @@ svg {
     height: 30px;
 }
 
+section > h2 {
+    margin-bottom: 1.5rem;
+}
+
 /* Container Styles */
 
 .main-container {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 5rem;
+}
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 /* navbar styles */
@@ -67,4 +78,38 @@ svg {
     .nav-items-active {
         right: 0;
     }
+}
+
+/* About Section */
+
+.profile-pic {
+    height: 300px;
+    border-radius: 20px;
+}
+
+/* Skills Section */
+
+.skill-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-card.split {
+    gap: 0.25rem;
+}
+
+/* Projects Section */
+
+/* Contact Section */
+
+/* Footer */
+
+footer {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
