@@ -40,9 +40,9 @@ svg {
 
 
     .nav-collapse-btn {
-        display: none;
         position: absolute;
         right: 1.5rem;
+        display: none;
     }
 
 @media  screen and (max-width: 500px) {

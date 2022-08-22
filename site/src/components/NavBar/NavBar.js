@@ -19,9 +19,11 @@ export default function NavBar() {
         <li><a className="nav-links" href="#projects">Projects</a></li>
         <li><a className="nav-links" href="#contact">Contact</a></li>
       </ul>
-      <svg className="nav-collapse-btn" onClick={handleClick} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
+      <div className="nav-collapse-btn">
+        <svg onClick={handleClick} xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
     </nav>
   )
 }
