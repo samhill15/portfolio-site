@@ -36,7 +36,6 @@ section > h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-between;
 }
 
 /* navbar styles */
@@ -82,6 +81,10 @@ section > h2 {
 
 /* About Section */
 
+.my-description {
+    width: min(75vw, 300px);
+}
+
 .profile-pic {
     height: 300px;
     border-radius: 20px;
@@ -89,15 +92,27 @@ section > h2 {
 
 /* Skills Section */
 
-.skill-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.skills-bio {
+    margin-bottom: 2.5rem;
 }
 
-.skill-card.split {
-    gap: 0.25rem;
+.skills-bio > p {
+    margin-bottom: 1rem;
 }
+
+.skill-cards-container {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+    .skill-card {
+        display: grid;
+    }
+
+    .skill-details {
+        /* width: 300px; */
+    }
 
 /* Projects Section */
 
