@@ -15,7 +15,7 @@ li {
     margin-right: 1rem;
 }
 
-svg {
+.icon {
     height: 30px;
 }
 
@@ -110,9 +110,6 @@ section > h2 {
         display: grid;
     }
 
-    .skill-details {
-        /* width: 300px; */
-    }
 
 /* Projects Section */
 

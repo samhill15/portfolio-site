@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { LinkOut, GithubFill } from 'akar-icons';
 
 export default function ProjectCard(props) {
   return (
@@ -8,8 +9,8 @@ export default function ProjectCard(props) {
             <p className="project-description">{props.description}</p>
         </div>
         <div className="project-links">
-            <a href={props.hostedURL}>View</a>
-            <a href={props.githubURL}>Repo</a>
+            <a href={props.hostedURL}><LinkOut /></a>
+            <a href={props.githubURL}><GithubFill /></a>
         </div>
     </div>
   )
