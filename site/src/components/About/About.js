@@ -7,7 +7,7 @@ export default function About() {
     <section id="#about">
         <h2>About Me</h2>
         <div className="split">
-          <div className="my-description">
+          <div className="my-description bio">
             <p>
                 I'm a Computer Science Undergrad at SDSU who loves
                 to learn about the web and computer security. In my

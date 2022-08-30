@@ -26,9 +26,12 @@ section > h2 {
 /* Container Styles */
 
 .main-container {
+    width: min(100%, 1000px);
+    margin: 0 auto;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5rem;
 }
 
@@ -36,6 +39,10 @@ section > h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+.bio {
+    width: 450px;
 }
 
 /* navbar styles */
@@ -81,20 +88,12 @@ section > h2 {
 
 /* About Section */
 
-.my-description {
-    width: min(75vw, 300px);
-}
-
 .profile-pic {
     height: 300px;
     border-radius: 20px;
 }
 
 /* Skills Section */
-
-.skills-bio {
-    margin-bottom: 2.5rem;
-}
 
 .skills-bio > p {
     margin-bottom: 1rem;
@@ -104,6 +103,7 @@ section > h2 {
     display: grid;
     gap: 1.5rem;
     align-items: center;
+    width: 300px;
 }
 
     .skill-card {
