@@ -1,34 +1,12 @@
 import React from 'react'
-import SkillCard from '../SkillCard/SkillCard'
+import SkillCard from '../../SkillCard/SkillCard'
 
 export default function Skills() {
   return (
     <section id="skills">
         <h2>Skills and Experience</h2>
         <div class="skills-container split">
-          <div className="bio skills-bio">
-            <p>
-              My main area of expertise is developing fast and
-              responsive web applications using modern technologies
-              such as Node, React, and MongoDB. 
-            </p>
-            <p>
-              I am also very passionate about learning cybersecurity, 
-              so I've gained considerable knowledge
-              about web application and general penetration testing by participating
-              in clubs and competitions through school, and just by learning on
-              my own.
-            </p>
-            <p>
-              Working as a Quality Assurance Software Engineer Intern
-              at <a href="https://www.servicenow.com/">ServiceNow</a> testing
-              web applications and their platform has taught me how to manage data,
-              carefully assess applications, and work closesly with others in the
-              Agile development as part of a SCRUM team.
-            </p>
-            <p>For more details check out my <a href="https://www.linkedin.com/in/sam-hilliard-35941b1aa/">LinkedIn</a> profile.</p>
-          </div>
-          <div className="skill-cards-container">
+        <div className="skill-cards-container">
             <SkillCard 
               name="Web Development"
               details={<>HTML &#9679; CSS &#9679; Javascript 
@@ -51,6 +29,28 @@ export default function Skills() {
               details={<>Java &#9679; Python &#9679; Git 
               &#9679; GitHub &#9679; Agile Development</>}
             />
+          </div>
+          <div className="bio skills-bio">
+            <p>
+              My main area of expertise is developing fast and
+              responsive web applications using modern technologies
+              such as Node, React, and MongoDB. 
+            </p>
+            <p>
+              I am also very passionate about learning cybersecurity, 
+              so I've gained considerable knowledge
+              about web application and general penetration testing by participating
+              in clubs and competitions through school, and just by learning on
+              my own.
+            </p>
+            <p>
+              Working as a Quality Assurance Software Engineer Intern
+              at <a href="https://www.servicenow.com/">ServiceNow</a> testing
+              web applications and their platform has taught me how to manage data,
+              carefully assess applications, and work closesly with others in the
+              Agile development as part of a SCRUM team.
+            </p>
+            <p>For more details check out my <a href="https://www.linkedin.com/in/sam-hilliard-35941b1aa/">LinkedIn</a> profile.</p>
           </div>
         </div>
     </section>

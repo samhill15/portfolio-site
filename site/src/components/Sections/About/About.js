@@ -1,6 +1,6 @@
 import React from 'react'
 
-import profilePic from '../../assets/images/profile-place-holder.jpg';
+import profilePic from '../../../assets/images/profile-place-holder.jpg';
 
 export default function About() {
   return (
