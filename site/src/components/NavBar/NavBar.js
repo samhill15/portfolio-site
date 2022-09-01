@@ -12,18 +12,20 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-        <div className="logo">SH</div>
-        <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
-          <li><a className="nav-links" href="#">Home</a></li>
-          <li><a className="nav-links" href="#about">About</a></li>
-          <li><a className="nav-links" href="#skills">Skills</a></li>
-          <li><a className="nav-links" href="#projects">Projects</a></li>
-          <li><a className="nav-links" href="#contact">Contact</a></li>
-        </ul>
-        <TextAlignRight 
-          className="icon nav-collapse-btn" 
-          onClick={handleClick} 
-        />
+        <div class="container">
+          <div className="logo">SH</div>
+          <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
+            <li><a className="nav-links" href="#">Home</a></li>
+            <li><a className="nav-links" href="#about">About</a></li>
+            <li><a className="nav-links" href="#skills">Skills</a></li>
+            <li><a className="nav-links" href="#projects">Projects</a></li>
+            <li><a className="nav-links" href="#contact">Contact</a></li>
+          </ul>
+          <TextAlignRight 
+            className="icon nav-collapse-btn" 
+            onClick={handleClick} 
+          />
+        </div>
     </nav>
   )
 }

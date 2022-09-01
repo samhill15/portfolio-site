@@ -25,10 +25,13 @@ section > h2 {
 
 /* Container Styles */
 
-.main-container {
+.container {
     width: min(100%, 1000px);
     margin: 0 auto;
     padding: 2rem;
+}
+
+.main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,13 +51,14 @@ section > h2 {
 /* navbar styles */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
-    padding: 1.5rem;
 }
-
+    
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .nav-collapse-btn {
         position: absolute;

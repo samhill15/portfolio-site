@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="main-container">
+      <div className="container main-container">
         <Header />
         <About />
         <Skills />
