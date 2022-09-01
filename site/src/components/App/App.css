@@ -132,6 +132,19 @@ section > h2 {
 
 /* Projects Section */
 
+.project-card {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 1.5rem;
+    width: min(100%, 450px);
+}
+
+    .project-links {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
 /* Contact Section */
 
 #contact {
