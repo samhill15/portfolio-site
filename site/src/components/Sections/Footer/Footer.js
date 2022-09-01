@@ -3,7 +3,7 @@ import { GithubFill, LinkedinBoxFill, Envelope, Paper } from 'akar-icons';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="centered">
         <ul>
             <li>
               <a href="https://github.com/samhill15?tab=followers">

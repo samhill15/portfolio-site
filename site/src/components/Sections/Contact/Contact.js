@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Contact() {
   return (
-    <section id="contact">
+    <section id="contact" className="centered">
         <h2>Let's Get in Touch</h2>
         <form id="contact-form">
             <div className="form-input">
@@ -20,7 +20,7 @@ export default function Contact() {
               <textarea id="message" name="message" rows="4"></textarea>
             </div>
 
-            <input type="submit" value="Submit" />
+            <input className="btn submit-btn" type="submit" value="Submit" />
         </form>
     </section>
   );
