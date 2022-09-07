@@ -5,7 +5,7 @@ export default function ProjectCard(props) {
   return (
     <div className="project-card">
         <div className="project-body">
-            <h3 className="project-title">{props.title}</h3>
+            <h4 className="project-title">{props.title}</h4>
             <p className="project-description">{props.description}</p>
         </div>
         <div className="project-links">
