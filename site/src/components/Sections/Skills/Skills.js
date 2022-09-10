@@ -4,7 +4,7 @@ import SkillCard from '../../SkillCard/SkillCard'
 export default function Skills() {
   return (
     <section id="skills">
-        <h2>Skills and Experience</h2>
+        <h2>Skills & Experience</h2>
         <div class="skills-container split">
         <div className="skill-cards-container">
             <SkillCard 
