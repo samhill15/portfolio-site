@@ -189,13 +189,15 @@ header {
     width: 100%;
 }
 
-.header-container {
-    gap: 4rem;
-}
-
-    .header-container * {
+    header * {
         color: var(--header-font-color);
     }
+
+    .header-container {
+        padding: 8rem 0;
+        gap: 4rem;
+    }
+
 
     .header-titles h1 {
         font-weight: bolder;
@@ -203,13 +205,6 @@ header {
 
     .header-titles h2 {
         font-weight: bold;
-    }
-
-    .header-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 8rem 0;
     }
 
         .header-btn {
