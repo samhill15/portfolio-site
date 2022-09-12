@@ -5,9 +5,9 @@ export default function Header() {
     <header>
       <div className="container centered header-container">
           <div className="header-titles">
-            <h4>I'm Sam Hillard.</h4>
+            <h5>I'm Sam Hillard.</h5>
             <h1>Web Developer</h1>
-            <h2>Security Enthusiast</h2>
+            <h3>Security Enthusiast</h3>
           </div>
           <a className="btn header-btn" href="#contact">Message Me</a>
       </div>

@@ -17,10 +17,14 @@ export default function Footer() {
             </li>
             <li>
               <a href="mailto:samhilliard51@gmail.com">
-                <Envelope className="icon" />
+                <Envelope className="icon icon-outlined" />
               </a>
             </li>
-            <li><a href=""><Paper className="icon" /></a></li>
+            <li>
+              <a href="">
+                <Paper className="icon icon-outlined" />
+              </a>
+            </li>
         </ul>
         <p>Developed and Designed by Sam Hilliard</p>
     </footer>
