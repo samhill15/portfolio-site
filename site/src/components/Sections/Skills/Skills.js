@@ -6,7 +6,7 @@ export default function Skills() {
     <section id="skills">
         <h2>Skills & Experience</h2>
         <div class="skills-container split">
-        <div className="skill-cards-container">
+          <div className="skill-cards-container">
             <SkillCard 
               name="Web Development"
               details={<>HTML &#9679; CSS &#9679; Javascript 
