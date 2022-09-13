@@ -355,24 +355,29 @@ header {
         flex-direction: column;
     }
 
-    #contact-form > .centered {
+    .submit-btn-container {
+        display: inline-block;
+        margin: 0 auto;
+        border-radius: 20px;
         margin-top: 1.5rem;
         position: relative;
     }
 
-    .submit-btn:hover {
+    .submit-btn-container:hover .submit-btn {
         background-color: var(--primary-color);
         color: var(--main-background-color);
     }
 
     .submit-icon {
         position: absolute;
+        left: 50%;
+        top: 13px;
         color: var(--main-background-color);
         opacity: 0;
         transition: all 300ms ease-in;
     }
 
-    .submit-btn:hover + .submit-icon {
+    .submit-btn-container:hover .submit-icon {
         opacity: 1;
         transform: translateX(65px);
     }

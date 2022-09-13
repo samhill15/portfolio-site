@@ -22,7 +22,7 @@ export default function Contact() {
               <textarea id="message" name="message" rows="4"></textarea>
             </div>
 
-            <div className="centered">
+            <div className="submit-btn-container">
               <input className="btn submit-btn" type="submit" value="Submit" />
               <ArrowRight className="submit-icon" />
             </div>
