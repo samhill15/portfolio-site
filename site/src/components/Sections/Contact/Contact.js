@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { ArrowRight } from 'akar-icons';
+
 export default function Contact() {
   return (
     <section id="contact">
@@ -20,7 +22,10 @@ export default function Contact() {
               <textarea id="message" name="message" rows="4"></textarea>
             </div>
 
-            <input className="btn submit-btn" type="submit" value="Submit" />
+            <div className="centered">
+              <input className="btn submit-btn" type="submit" value="Submit" />
+              <ArrowRight className="submit-icon" />
+            </div>
         </form>
     </section>
   );
