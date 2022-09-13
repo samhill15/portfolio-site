@@ -43,6 +43,7 @@ a {
 
 .icon:hover {
     fill: var(--primary-color);
+    transform: scale(1.2);
 }
 
 .icon:hover.icon-outlined {

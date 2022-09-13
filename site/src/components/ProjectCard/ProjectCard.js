@@ -9,8 +9,8 @@ export default function ProjectCard(props) {
             <p className="project-description">{props.description}</p>
         </div>
         <div className="project-links">
-            <a href={props.hostedURL}><LinkOut /></a>
-            <a href={props.githubURL}><GithubFill /></a>
+            <a href={props.hostedURL}><LinkOut className="icon icon-outlined" /></a>
+            <a href={props.githubURL}><GithubFill className="icon" /></a>
         </div>
     </div>
   )
