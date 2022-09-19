@@ -302,6 +302,10 @@ header {
 
 /* Skills Section */
 
+.skills-container {
+    align-items: center;
+}
+
 .skills-bio > p {
     margin-bottom: 1rem;
 }
@@ -310,6 +314,7 @@ header {
     display: grid;
     gap: 1.5rem;
     width: 300px;
+    height: min(100%, 500px);
 }
 
     .skill-card {
