@@ -25,7 +25,7 @@ export default function Skills() {
               object oriented concepts, and collaborating in an enterprise environment.</>}
             />
           </div>
-          <div className="bio skills-bio">
+          <div className="bio">
             <p>
               My main area of expertise is developing fast and
               responsive web applications using modern technologies

@@ -4,6 +4,7 @@
     --primary-color: hsl(207, 61%, 30%);
     --secondary-color: hsl(49, 24%, 77%);
     --main-background-color: hsl(0, 0%, 95%);
+    --accent-color: hsl(240, 0%, 41%);
 
     --main-font: 'Arvo', serif;
     --main-font-color: hsl(229, 20%, 28%);
@@ -164,6 +165,10 @@ p {
     transition: all 300ms ease-in-out;
 }
 
+.bio > p {
+    margin-bottom: 1rem;
+}
+
 /* navbar styles */
 
 .navbar {
@@ -295,19 +300,22 @@ header {
 
 /* About Section */
 
+.my-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 4rem;
+}
+
 .profile-pic {
     height: 300px;
-    border-radius: 20px;
+    border-radius: 50%;
 }
 
 /* Skills Section */
 
 .skills-container {
     align-items: center;
-}
-
-.skills-bio > p {
-    margin-bottom: 1rem;
 }
 
 .skill-cards-container {
@@ -325,7 +333,7 @@ header {
 /* Projects Section */
 
 .project-card {
-    border: 1px solid grey;
+    border: 1px solid var(--accent-color);
     border-radius: 5px;
     padding: 1.5rem;
     width: min(100%, 450px);
@@ -355,9 +363,24 @@ header {
     width: min(100%, 600px);
 }
 
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
     .form-input {
-        display: flex;
-        flex-direction: column;
+        background-color: var(--main-background-color);
+        border: 2px solid var(--accent-color);
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .form-input:focus {
+        border-color: var(--primary-color);
+    }
+
+    #email, #name {
+        height: 30px;
     }
 
     .submit-btn-container {

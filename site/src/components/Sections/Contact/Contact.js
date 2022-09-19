@@ -7,19 +7,19 @@ export default function Contact() {
     <section id="contact">
         <h2>Let's Get in Touch</h2>
         <form id="contact-form">
-            <div className="form-input">
+            <div className="form-input-container">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" />
+              <input className="form-input" type="text" id="name" name="name" />
             </div>
 
-            <div className="form-input">
+            <div className="form-input-container">
               <label for="email">Email</label>
-              <input type="email" id="email" name="name" />
+              <input className="form-input" type="email" id="email" name="name" />
             </div>
 
-            <div className="form-input">
+            <div className="form-input-container">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4"></textarea>
+              <textarea className="form-input" id="message" name="message" rows="4"></textarea>
             </div>
 
             <div className="submit-btn-container">
