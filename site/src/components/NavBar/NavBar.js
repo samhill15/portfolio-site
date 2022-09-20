@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { TextAlignRight } from 'akar-icons';
+import { TextAlignRight, Cross } from 'akar-icons';
 
 export default function NavBar() {
 
@@ -22,9 +22,12 @@ export default function NavBar() {
             <li><a className="nav-links" href="#contact">Contact</a><span className="nav-underline"></span></li>
           </ul>
           <TextAlignRight 
-            className="icon nav-collapse-btn" 
+            className="icon nav-collapse-btn nav-expand-btn" 
             onClick={handleClick} 
           />
+          <Cross 
+            className="icon nav-collapse-btn nav-close-btn" 
+            onClick={handleClick} />
         </div>
     </nav>
   )

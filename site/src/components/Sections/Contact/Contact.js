@@ -9,17 +9,17 @@ export default function Contact() {
         <form id="contact-form">
             <div className="form-input-container">
               <label for="name">Name</label>
-              <input className="form-input" type="text" id="name" name="name" />
+              <input required className="form-input" type="text" id="name" name="name" />
             </div>
 
             <div className="form-input-container">
               <label for="email">Email</label>
-              <input className="form-input" type="email" id="email" name="name" />
+              <input required className="form-input" type="email" id="email" name="name" />
             </div>
 
             <div className="form-input-container">
               <label for="message">Message</label>
-              <textarea className="form-input" id="message" name="message" rows="4"></textarea>
+              <textarea required className="form-input" id="message" name="message" rows="4"></textarea>
             </div>
 
             <div className="submit-btn-container">
