@@ -12,7 +12,7 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-        <div class="container">
+        <div className="container">
           <div className="logo">SH</div>
           <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
             <li><a className="nav-links" href="#">Home</a><span className="nav-underline"></span></li>

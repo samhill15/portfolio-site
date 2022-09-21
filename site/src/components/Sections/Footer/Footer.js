@@ -11,10 +11,10 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/sam-hilliard-35941b1aa/">
             <LinkedinBoxFill className="icon" />
           </a>
-          <a href="mailto:samhilliard51@gmail.com">
+          <a href="mailto:samhilliarddev@gmail.com">
             <Envelope className="icon icon-outlined" />
           </a>
-          <a href="">
+          <a href="../../../assets/Resume.pdf">
             <Paper className="icon icon-outlined" />
           </a>
         </div>
