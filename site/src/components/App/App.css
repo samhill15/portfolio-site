@@ -411,6 +411,10 @@ header {
         color: var(--error-color);
     }
 
+    .form-input {
+        color: var(--main-font-color);
+    }
+
     #email, #name {
         height: 30px;
     }
