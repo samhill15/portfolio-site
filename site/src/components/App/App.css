@@ -405,6 +405,12 @@ header {
         color: var(--primary-color);
     }
 
+    .form-input-error > * {
+        --error-color: hsl(0, 57%, 49%);
+        border-color: var(--error-color);
+        color: var(--error-color);
+    }
+
     #email, #name {
         height: 30px;
     }

@@ -5,21 +5,29 @@ import { ArrowRight } from 'akar-icons';
 
 export default function Contact() {
 
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-
-  
+  const [inputs, setInputs] = useState({
+    email: {
+      val: '',
+      error: false
+    },
+    name: {
+      val: '',
+      error: false
+    },
+    message: {
+      val: '',
+      error: false
+    }
+  });
 
   const handleSubmit = e => {
-    console.log(`Email: ${email}`);
-    console.log(`Name: ${name}`);
-    console.log(`Message: ${message}`);
-    
-    setEmail('');
-    setName('');
-    setMessage('');
+    console.log(inputs);
 
+    // Error handling
+    // for (let key in inputs) {
+    //   console.log(`${key}: ${inputs[key].val}`);
+    // }
+  
     e.preventDefault();
   }
 
@@ -27,40 +35,38 @@ export default function Contact() {
     const inputName = e.target.name;
     const val = e.target.value;
 
-    if (inputName === 'email') {
-      setEmail(val);
-    }
-
-    if (inputName === 'name') {
-      setName(val);
-    }
-
-    if (inputName === 'message') {
-      setMessage(val);
-    }
+    setInputs(prevVals => {
+      return {
+        ...prevVals,
+        [inputName]: {
+          ...prevVals[inputName],
+          val: val
+        }
+      }
+    });
   }
 
   return (
     <section id="contact">
         <h2>Let's Get in Touch</h2>
         <form onSubmit={handleSubmit} id="contact-form">
-            <div className="form-input-container">
+            <div className="form-input-container name-container">
               <label htmlFor="name">Name</label>
-              <input onChange={handleChange} required className="form-input" type="text" id="name" name="name" />
+              <input onChange={handleChange} className="form-input" type="text" id="name" name="name" />
             </div>
 
-            <div className="form-input-container">
+            <div className="form-input-container email-container">
               <label htmlFor="email">Email</label>
-              <input onChange={handleChange} required className="form-input" type="email" id="email" name="email" />
+              <input onChange={handleChange} className="form-input" id="email" name="email" />
             </div>
 
-            <div className="form-input-container">
+            <div className="form-input-container message-container">
               <label htmlFor="message">Message</label>
-              <textarea onChange={handleChange} required className="form-input" id="message" name="message" rows="4"></textarea>
+              <textarea onChange={handleChange} className="form-input" id="message" name="message" rows="4"></textarea>
             </div>
 
             <div className="submit-btn-container">
-              <input className="btn submit-btn" type="submit" value="Submit" />
+              <input className="btn submit-btn" type="submit" value="Send" />
               <ArrowRight className="submit-icon" />
             </div>
         </form>
