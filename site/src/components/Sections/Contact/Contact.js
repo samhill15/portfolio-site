@@ -5,90 +5,90 @@ import { ArrowRight } from 'akar-icons';
 
 export default function Contact() {
 
-  const [inputs, setInputs] = useState({
-    email: {
-      val: '',
-      error: false
-    },
-    name: {
-      val: '',
-      error: false
-    },
-    message: {
-      val: '',
-      error: false
-    }
-  });
+  const defaultInputs = {
+  email: {
+    val: '',
+    empty: true,
+    isValid: true
+  },
+  name: {
+    val: '',
+    empty: true
+  },
+  message: {
+    val: '',
+    empty: true
+  }
+}
+
+  const [inputs, setInputs] = useState(defaultInputs);
+
+  const [formValidationEnabled, setFormValidationEnabled] = useState(false);
 
   const handleSubmit = e => {
+    let emptyFields = false;
 
-    let inputError = false;
+    setFormValidationEnabled(true);
 
-    // Error handling
     for (let key in inputs) {
-
-      if (inputs[key].val.length === 0) {
-        inputError = true;
-
-        setInputs(prevVals => {
-          return {
-            ...prevVals,
-            [key]: {
-              ...prevVals[key],
-              error: true
-            }
-          }
-        });
-
+      if (inputs[key].empty) {
+        emptyFields = true;
       }
     }
 
-    // send email and clear fields
-    if (!inputError) {
-      console.log("Ready to send an email!");
-
-      // setting all of the input vals to empty
-      // setting all of the error flags to false
-      for (let key in inputs) {
-        setInputs(prevVals => {
-          return {
-            ...prevVals,
-            [key]: {
-              val: '',
-              error: false
-            }
-          }
-        });
-      }
-    } else {
-      console.log("Errors Exist!");
-      console.log(inputs);
+    // no errors exist so send the email
+    if (!emptyFields && inputs.email.isValid) {
+      setFormValidationEnabled(false);
+      setInputs(defaultInputs);
     }
-  
+
     e.preventDefault();
   }
 
   const handleChange = e => {
-    const inputName = e.target.name;
+    const name = e.target.name;
     const val = e.target.value;
 
+    // handling empty values
     setInputs(prevVals => {
       return {
         ...prevVals,
-        [inputName]: {
-          ...prevVals[inputName],
-          val: val
+        [name]: {
+          ...prevVals[name],
+          val: val,
+          empty: val.length === 0
         }
       }
     });
-  }
+
+    // handing valid emails
+    if (name === "email") {
+      setInputs(prevVals => {
+        return {
+          ...prevVals,
+          email: {
+            ...prevVals.email,
+            isValid: isValidEmail(inputs.email.val)
+          }
+        }
+      });
+    }
+  };
+
+  const isValidEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
   return (
     <section id="contact">
         <h2>Let's Get in Touch</h2>
         <form onSubmit={handleSubmit} id="contact-form">
-            <div className={`form-input-container name-container ${inputs.name.error ? 'form-input-error': ''}`}>
-              <label htmlFor="name">Name</label>
+            <div className={`form-input-container name-container ${(formValidationEnabled && inputs.name.empty) ? 'form-input-error': ''}`}>
+              <label htmlFor="name">Name *</label>
               <input 
                 onChange={handleChange} 
                 className="form-input" 
@@ -99,8 +99,8 @@ export default function Contact() {
               />
             </div>
 
-            <div className={`form-input-container email-container ${inputs.email.error ? 'form-input-error': ''}`}>
-              <label htmlFor="email">Email</label>
+            <div className={`form-input-container email-container ${formValidationEnabled && (inputs.email.empty || !inputs.email.isValid) ? 'form-input-error': ''}`}>
+              <label htmlFor="email">Email *</label>
               <input onChange={handleChange} 
                 className="form-input"
                 id="email" 
@@ -109,8 +109,8 @@ export default function Contact() {
               />
             </div>
 
-            <div className={`form-input-container message-container ${inputs.message.error ? 'form-input-error': ''}`}>
-              <label htmlFor="message">Message</label>
+            <div className={`form-input-container message-container ${(formValidationEnabled && inputs.message.empty) ? 'form-input-error': ''}`}>
+              <label htmlFor="message">Message *</label>
               <textarea 
                 onChange={handleChange} 
                 className="form-input" 
@@ -120,6 +120,11 @@ export default function Contact() {
                 value={inputs.message.val}
               >
               </textarea>
+            </div>
+
+            <div className="centered error-container">
+              {formValidationEnabled && (inputs.email.empty || inputs.message.empty || inputs.name.empty) && <div className="error-message">Please fill out all of the required forms.</div>}
+              {formValidationEnabled && (!inputs.email.empty && !inputs.email.isValid) && <div className="error-message">Please enter a valid email.</div>}
             </div>
 
             <div className="submit-btn-container">
