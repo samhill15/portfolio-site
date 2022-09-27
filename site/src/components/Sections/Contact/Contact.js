@@ -24,6 +24,7 @@ export default function Contact() {
   const [inputs, setInputs] = useState(defaultInputs);
 
   const [formValidationEnabled, setFormValidationEnabled] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleSubmit = e => {
     let emptyFields = false;
@@ -38,8 +39,9 @@ export default function Contact() {
 
     // no errors exist so send the email
     if (!emptyFields && inputs.email.isValid) {
-      setFormValidationEnabled(false);
-      setInputs(defaultInputs);
+
+      //sending email
+
     }
 
     e.preventDefault();
@@ -122,9 +124,11 @@ export default function Contact() {
               </textarea>
             </div>
 
-            <div className="centered error-container">
+            <div className="centered status-container">
               {formValidationEnabled && (inputs.email.empty || inputs.message.empty || inputs.name.empty) && <div className="error-message">Please fill out all of the required forms.</div>}
               {formValidationEnabled && (!inputs.email.empty && !inputs.email.isValid) && <div className="error-message">Please enter a valid email.</div>}
+              {formValidationEnabled && emailSent && <div className="success-message">Email successfully sent!</div>}
+              {formValidationEnabled && !emailSent && <div className="error-message">Email failed to send :(</div>}
             </div>
 
             <div className="submit-btn-container">
