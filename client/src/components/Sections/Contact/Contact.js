@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 
 import { ArrowRight } from 'akar-icons';
 
@@ -24,6 +25,7 @@ export default function Contact() {
   const [inputs, setInputs] = useState(defaultInputs);
 
   const [formValidationEnabled, setFormValidationEnabled] = useState(false);
+  const [displayMessage, setDisplayMessage] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
 
   const handleSubmit = e => {
@@ -39,9 +41,23 @@ export default function Contact() {
 
     // no errors exist so send the email
     if (!emptyFields && inputs.email.isValid) {
+      setFormValidationEnabled(false);
+      setInputs(defaultInputs);
 
       //sending email
-      
+      axios.post('/send', {
+        email: inputs.email.val,
+        name: inputs.name.val,
+        message: inputs.message.val
+      })
+      .then((response) => {
+        setDisplayMessage(true);
+        setEmailSent(true);
+      })
+      .catch((error) => {
+        setDisplayMessage(false);
+        setEmailSent(false);
+      });
 
     }
 
@@ -128,8 +144,8 @@ export default function Contact() {
             <div className="centered status-container">
               {formValidationEnabled && (inputs.email.empty || inputs.message.empty || inputs.name.empty) && <div className="error-message">Please fill out all of the required forms.</div>}
               {formValidationEnabled && (!inputs.email.empty && !inputs.email.isValid) && <div className="error-message">Please enter a valid email.</div>}
-              {formValidationEnabled && emailSent && <div className="success-message">Email successfully sent!</div>}
-              {formValidationEnabled && !emailSent && <div className="error-message">Email failed to send :(</div>}
+              {displayMessage && emailSent && <div className="success-message">Email successfully sent!</div>}
+              {displayMessage && !emailSent && <div className="error-message">Email failed to send :(</div>}
             </div>
 
             <div className="submit-btn-container">

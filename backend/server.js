@@ -33,7 +33,7 @@ app.post("/send", (req, res) => {
     let options = {
             from:  `${req.body.email}`,
             to: process.env.EMAIL,
-            subject: `${req.body.name}`,
+            subject: `${req.body.name}: ${req.body.email}`,
             text: `${req.body.message}`
         };
         
