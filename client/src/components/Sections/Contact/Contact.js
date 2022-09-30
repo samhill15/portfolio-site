@@ -41,6 +41,7 @@ export default function Contact() {
     if (!emptyFields && inputs.email.isValid) {
 
       //sending email
+      
 
     }
 
