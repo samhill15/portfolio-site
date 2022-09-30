@@ -8,6 +8,9 @@ export default function NavBar() {
 
   const handleClick = () => {
     setNavItemsActive(prevVal => !prevVal);
+
+    // disable scrolling on body
+    document.body.style.overflow = "hidden";
   }
 
   return (
