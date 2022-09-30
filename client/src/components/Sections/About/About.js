@@ -4,10 +4,10 @@ import profilePic from '../../../assets/images/profile-pic.jpg';
 
 export default function About() {
   return (
-    <section className=".about">
+    <section className="about">
         <h2 id="about">About Me</h2>
-        <div className="split">
-          <div className="my-description bio">
+        <div className="split my-description">
+          <div className="bio">
             <p>
                 I'm a Computer Science Undergrad at SDSU who loves
                 to learn about the web and computer security. If all
