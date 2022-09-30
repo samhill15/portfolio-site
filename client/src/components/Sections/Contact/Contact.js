@@ -103,8 +103,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact">
-        <h2>Let's Get in Touch</h2>
+    <section className="contact">
+        <h2 id="contact">Let's Get in Touch</h2>
         <form onSubmit={handleSubmit} id="contact-form">
             <div className={`form-input-container name-container ${(formValidationEnabled && inputs.name.empty) ? 'form-input-error': ''}`}>
               <label htmlFor="name">Name *</label>

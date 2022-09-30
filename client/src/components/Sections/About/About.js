@@ -4,8 +4,8 @@ import profilePic from '../../../assets/images/profile-pic.jpg';
 
 export default function About() {
   return (
-    <section id="#about">
-        <h2>About Me</h2>
+    <section className=".about">
+        <h2 id="about">About Me</h2>
         <div className="split">
           <div className="my-description bio">
             <p>

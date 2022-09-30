@@ -10,7 +10,7 @@ export default function NavBar() {
     setNavItemsActive(prevVal => !prevVal);
 
     // disable scrolling on body
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = navItemsActive ? "scroll" : "hidden";
   }
 
   return (
@@ -18,11 +18,11 @@ export default function NavBar() {
         <div className="container">
           <div className="logo">SH</div>
           <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
-            <li><a className="nav-links" href="#">Home</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="#about">About</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="#skills">Skills</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="#projects">Projects</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="#contact">Contact</a><span className="nav-underline"></span></li>
+            <li><a className="nav-links" href="#" onClick={handleClick}>Home</a><span className="nav-underline"></span></li>
+            <li><a className="nav-links" href="#about" onClick={handleClick}>About</a><span className="nav-underline"></span></li>
+            <li><a className="nav-links" href="#skills" onClick={handleClick}>Skills</a><span className="nav-underline"></span></li>
+            <li><a className="nav-links" href="#projects" onClick={handleClick}>Projects</a><span className="nav-underline"></span></li>
+            <li><a className="nav-links" href="#contact" onClick={handleClick}>Contact</a><span className="nav-underline"></span></li>
           </ul>
           <TextAlignRight 
             className="icon nav-collapse-btn nav-expand-btn" 

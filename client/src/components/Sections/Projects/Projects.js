@@ -3,8 +3,8 @@ import ProjectCard from '../../ProjectCard/ProjectCard'
 
 export default function Projects() {
   return (
-    <section>
-        <h2>My Projects</h2>
+    <section className="projects">
+        <h2 id="projects">My Projects</h2>
         <ProjectCard 
           title="Pokemon Counter Calculator"
           description={<>A browser-like calculator 

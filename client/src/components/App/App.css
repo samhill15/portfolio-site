@@ -373,7 +373,7 @@ header {
 
 /* Contact Section */
 
-#contact {
+.contact {
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
