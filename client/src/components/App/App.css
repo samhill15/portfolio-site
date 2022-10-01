@@ -17,6 +17,10 @@
     font-family: var(--main-font);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     color: var(--main-font-color);
     background-color: var(--main-background-color);
