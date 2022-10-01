@@ -1,16 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { TextAlignRight, Cross } from 'akar-icons';
 
 export default function NavBar() {
 
   const [navItemsActive, setNavItemsActive] = useState(false);
 
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+      function handleWindowResize() {
+          setWindowSize(getWindowSize());
+      }
+
+      window.addEventListener('resize', handleWindowResize);
+
+      return () => {
+          window.removeEventListener('resize', handleWindowResize);
+      };
+    }, []);
+
   const handleClick = () => {
     setNavItemsActive(prevVal => !prevVal);
 
-    // disable scrolling on body
-    document.body.style.overflow = navItemsActive ? "scroll" : "hidden";
+    // disable scrolling on body when in responsive mode
+    if (windowSize.innerWidth <= 600) {
+      document.body.style.overflow = navItemsActive ? "scroll" : "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
   }
 
   return (
@@ -34,4 +52,9 @@ export default function NavBar() {
         </div>
     </nav>
   )
+}
+
+function getWindowSize() {
+  const {innerWidth, innerHeight} = window;
+  return {innerWidth, innerHeight};
 }
