@@ -392,6 +392,7 @@ header {
         border: 2px solid var(--main-font-color);
         border-radius: 5px;
         width: 100%;
+        padding: 0 5px;
     }
 
     .form-input:focus {

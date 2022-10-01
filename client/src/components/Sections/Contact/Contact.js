@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import axios from 'axios';
+import { send } from 'emailjs-com';
 
 import { ArrowRight } from 'akar-icons';
 
@@ -45,11 +45,18 @@ export default function Contact() {
       setInputs(defaultInputs);
 
       //sending email
-      axios.post('/send', {
-        email: inputs.email.val,
-        name: inputs.name.val,
+      let emailData = {
+        from_email: inputs.email.val,
+        from_name: inputs.name.val,
         message: inputs.message.val
-      })
+      };
+
+      send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        emailData,
+        process.env.REACT_APP_PUBKEY
+      )
       .then((response) => {
         setDisplayMessage(true);
         setEmailSent(true);
