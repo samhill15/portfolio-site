@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="centered">
         <div className="icon-tray">
-          <a href="https://github.com/samhill15?tab=followers">
+          <a href="https://github.com/sam-hilliard?tab=followers">
             <GithubFill className="icon" />
           </a>
           <a href="https://www.linkedin.com/in/sam-hilliard-35941b1aa/">

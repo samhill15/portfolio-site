@@ -15,8 +15,8 @@ export default function Projects() {
           the best counters for one or more types. Data fetched from the 
           &nbsp;<a href='https://pokeapi.co/'>PokeAPI</a>. Built 
           with React and MUI components.</>}
-          hostedURL="https://samhill15.github.io/pokemon-counter-calculator/"
-          githubURL="https://github.com/samhill15/pokemon-counter-calculator"
+          hostedURL="https://sam-hilliard.github.io/pokemon-counter-calculator/"
+          githubURL="https://github.com/sam-hilliard/pokemon-counter-calculator"
         />
     </section>
   )
