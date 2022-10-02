@@ -448,17 +448,26 @@ header {
     }
 
     .submit-icon {
-        position: absolute;
-        left: 50%;
-        top: 13px;
-        color: var(--main-background-color);
-        opacity: 0;
-        transition: all 300ms ease-in;
+        display: none;
     }
 
-    .submit-btn-container:hover .submit-icon {
-        opacity: 1;
-        transform: translateX(65px);
+    /* don't show arrow animation on mobile */
+    @media screen and (min-width: 600px) {
+
+        .submit-icon {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 13px;
+            color: var(--main-background-color);
+            opacity: 0;
+            transition: all 300ms ease-in;
+        }
+
+        .submit-btn-container:hover .submit-icon {
+            opacity: 1;
+            transform: translateX(65px);
+        }
     }
 
 /* Footer */
