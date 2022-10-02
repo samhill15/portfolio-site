@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="wrapper">
       <NavBar />
       <Header />
       <div className="container main-container centered">

@@ -17,10 +17,6 @@
     font-family: var(--main-font);
 }
 
-html {
-    overflow-x: hidden;
-}
-
 body {
     color: var(--main-font-color);
     background-color: var(--main-background-color);
@@ -35,6 +31,11 @@ li {
 a {
     color: var(--primary-color);
     font-weight: bold;
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
 }
 
 .icon {
