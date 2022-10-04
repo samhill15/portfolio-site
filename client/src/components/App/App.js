@@ -1,11 +1,10 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 // components
 import NavBar from '../NavBar/NavBar';
-import Header from '../Sections/Header/Header';
-import About from '../Sections/About/About';
-import Skills from '../Sections/Skills/Skills';
-import Projects from '../Sections/Projects/Projects';
-import Contact from '../Sections/Contact/Contact';
 import Footer from '../Sections/Footer/Footer';
+import Home from '../Pages/Home/Home';
+import WebDevAlliance from '../Pages/WebDevAlliance/WebDevAlliance';
 
 // css
 import './App.css';
@@ -14,13 +13,14 @@ function App() {
   return (
     <div className="wrapper">
       <NavBar />
-      <Header />
-      <div className="container main-container centered">
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/">
+              <Route index element={<Home />} />
+              <Route path="webdevalliance" element={<WebDevAlliance />} />
+            </Route>
+          </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );
