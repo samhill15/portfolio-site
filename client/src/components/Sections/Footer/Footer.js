@@ -1,6 +1,8 @@
 import React from 'react';
 import { GithubFill, LinkedinBoxFill, Envelope, Paper } from 'akar-icons';
 
+import resume from '../../../assets/Resume.pdf';
+
 export default function Footer() {
   return (
     <footer className="centered">
@@ -14,7 +16,7 @@ export default function Footer() {
           <a href="mailto:samhilliarddev@gmail.com">
             <Envelope className="icon icon-outlined" />
           </a>
-          <a href="../../../assets/Resume.pdf">
+          <a target="_blank" rel="noreferrer" href={resume}>
             <Paper className="icon icon-outlined" />
           </a>
         </div>
