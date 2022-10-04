@@ -24,7 +24,7 @@ export default function NavBar() {
     setNavItemsActive(prevVal => !prevVal);
 
     // disable scrolling on body when in responsive mode
-    if (windowSize.innerWidth <= 600) {
+    if (windowSize.innerWidth <= 900) {
       document.body.style.overflow = navItemsActive ? "scroll" : "hidden";
     } else {
       document.body.style.overflow = "scroll";
