@@ -34,7 +34,7 @@ export default function NavBar() {
   return (
     <nav className="navbar">
         <div className="container">
-          <div className="logo">SH</div>
+          <a href="/" className="logo">SH</a>
           <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
             <li><a className="nav-links" href="/" onClick={handleClick}>Home</a><span className="nav-underline"></span></li>
             <li><a className="nav-links" href="/#about" onClick={handleClick}>About</a><span className="nav-underline"></span></li>
