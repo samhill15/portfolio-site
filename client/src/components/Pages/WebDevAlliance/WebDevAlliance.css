@@ -1,0 +1,17 @@
+.job-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.job-container h1 {
+    margin-top: 3rem;
+}
+
+.job-container h2 {
+    margin-bottom: 2rem;
+} 
+
+.job-container p {
+    margin-bottom: 1rem;
+}
