@@ -168,7 +168,7 @@ export default function WebDevAlliance() {
         </div>
 
         <div className="centered">
-          <a className="btn" href="/#">Apply</a>
+          <a className="btn" target="_blank" href="https://forms.gle/fw4WmGiuE9Arn9Jm6">Apply</a>
         </div>
     </div>
   );
