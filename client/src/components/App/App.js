@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/">
               <Route index element={<Home />} />
-              <Route path="webdevalliance" element={<WebDevAlliance />} />
+              <Route path="/webdevalliance" element={<WebDevAlliance />} />
             </Route>
           </Routes>
       </BrowserRouter>
