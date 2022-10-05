@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // components
 import NavBar from '../NavBar/NavBar';
@@ -13,14 +13,10 @@ function App() {
   return (
     <div className="wrapper">
       <NavBar />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/">
-              <Route index element={<Home />} />
-              <Route path="/webdevalliance" element={<WebDevAlliance />} />
-            </Route>
-          </Routes>
-      </BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/webdevalliance" element={<WebDevAlliance />} />
+        </Routes>
       <Footer />
     </div>
   );
