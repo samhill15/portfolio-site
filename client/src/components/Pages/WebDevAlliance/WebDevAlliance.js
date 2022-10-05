@@ -60,25 +60,34 @@ export default function WebDevAlliance() {
                 you will be working as part of a team of developers, as well as 
                 with other departments to meet deadlines.
               </p>
-              <h5>Required Skills</h5>
-              <ul>
-                <li>Strong understanding of web languages (HTML, CSS, Javascript)</li>
-                <li>Responsive development practices</li>
-                <li>Experience with Git/GitHub</li>
-                <li>Collaborative and communication skills</li>
-              </ul>
-              <h5>Recommended Skills</h5>
-              <ul>
-                <li>
-                  Modern web technologies/frameworks: React, Vue, Angular, EJS, 
-                  and WordPress
-                </li>
-                <li>Backend and database technologies: Python (Flask), 
-                  MongoDB/Mongoose, Express, Node, 
-                  PHP, and SQL
-                </li>
-                <li>Experience working at the Enterprise level</li>
-              </ul>
+
+              <div className="skill-specifications">
+                <div className="required-skills">
+                  <h5>Required Skills</h5>
+                  <ul>
+                    <li>Strong understanding of web languages (HTML, CSS, Javascript)</li>
+                    <li>Responsive development practices</li>
+                    <li>Experience with Git/GitHub</li>
+                    <li>Collaborative and communication skills</li>
+                  </ul>
+                </div>
+
+                <div className="recommended-skills">
+                  <h5>Recommended Skills</h5>
+                  <ul>
+                    <li>
+                      Modern web technologies/frameworks: React, Vue, Angular, EJS, 
+                      and WordPress
+                    </li>
+                    <li>
+                      Backend and database technologies: Python (Flask), 
+                      MongoDB/Mongoose, Express, Node, 
+                      PHP, and SQL
+                    </li>
+                    <li>Experience working at the Enterprise level</li>
+                  </ul>
+                </div>
+              </div>
             </AccordionDetails>
           </Accordion>
           <Accordion>
@@ -97,18 +106,25 @@ export default function WebDevAlliance() {
                 for the web.
               </p>
 
-              <h5>Required Skills</h5>
-              <ul>
-                <li>Graphical design (Adobe Photoshop/Illustrator or similar software)</li>
-                <li>UI/UX Web Design</li>
-                <li>Knowledge of the latest design trends</li>
-                <li>Collaborative and communication skills</li>
-              </ul>
-              <h5>Recommended Skills</h5>
-              <ul>
-                <li>Experience using Figma</li>
-                <li>Experience working at the Enterprise level</li>
-              </ul>
+              <div className="skill-specifications">
+                <div className="required-skills">
+                  <h5>Required Skills</h5>
+                  <ul>
+                    <li>Graphical design (Adobe Photoshop/Illustrator or similar software)</li>
+                    <li>UI/UX Web Design</li>
+                    <li>Knowledge of the latest design trends</li>
+                    <li>Collaborative and communication skills</li>
+                  </ul>
+                </div>
+
+                <div className="recommended-skills">
+                  <h5>Recommended Skills</h5>
+                  <ul>
+                    <li>Experience using Figma</li>
+                    <li>Experience working at the Enterprise level</li>
+                  </ul>
+                </div>
+              </div>
             </AccordionDetails>
           </Accordion>
           <Accordion>
@@ -128,18 +144,25 @@ export default function WebDevAlliance() {
                 keep a steady stream of clients coming our way. 
               </p>
 
-              <h5>Required Skills</h5>
-              <ul>
-                <li>Be able to communicate effectively and courteously</li>
-                <li>Be able to leverage the web and social networking platforms</li>
-                <li>Be able to create attention drawing ads and place them effectively</li>
-              </ul>
-              <h5>Recommended Skills</h5>
-              <ul>
-                <li>Experience promoting a company or other entity</li>
-                <li>experience creating effective advertisments</li>
-                <li>Be able to build or already have a strong social media profile</li>
-              </ul>
+              <div className="skill-specifications">
+                <div className="required-skills">
+                  <h5>Required Skills</h5>
+                  <ul>
+                    <li>Be able to communicate effectively and courteously</li>
+                    <li>Be able to leverage the web and social networking platforms</li>
+                    <li>Be able to create attention drawing ads and place them effectively</li>
+                  </ul>
+                </div>
+
+                <div className="recommended-skills">
+                  <h5>Recommended Skills</h5>
+                  <ul>
+                    <li>Experience promoting a company or other entity</li>
+                    <li>experience creating effective advertisments</li>
+                    <li>Be able to build or already have a strong social media profile</li>
+                  </ul>
+                </div>
+              </div>
             </AccordionDetails>
           </Accordion>
         </div>
