@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { useState, useEffect } from 'react';
 import { TextAlignRight, Cross } from 'akar-icons';
 
@@ -34,14 +36,14 @@ export default function NavBar() {
   return (
     <nav className="navbar">
         <div className="container">
-          <a href="/" className="logo">SH</a>
+          <Link href="/" className="logo">SH</Link>
           <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
-            <li><a className="nav-links" href="/" onClick={handleClick}>Home</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="/#about" onClick={handleClick}>About</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="/#skills" onClick={handleClick}>Skills</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="/#projects" onClick={handleClick}>Projects</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="/#contact" onClick={handleClick}>Contact</a><span className="nav-underline"></span></li>
-            <li><a className="nav-links" href="/webdevalliance" onClick={handleClick}>WebDev Alliance</a><span className="nav-underline"></span></li>
+            <li><Link className="nav-links" to="/" onClick={handleClick}>Home</Link><span className="nav-underline"></span></li>
+            <li><HashLink className="nav-links" to="/#about" onClick={handleClick}>About</HashLink><span className="nav-underline"></span></li>
+            <li><HashLink className="nav-links" to="/#skills" onClick={handleClick}>Skills</HashLink><span className="nav-underline"></span></li>
+            <li><HashLink className="nav-links" to="/#projects" onClick={handleClick}>Projects</HashLink><span className="nav-underline"></span></li>
+            <li><HashLink className="nav-links" to="/#contact" onClick={handleClick}>Contact</HashLink><span className="nav-underline"></span></li>
+            <li><Link className="nav-links" to="/webdevalliance" onClick={handleClick}>WebDev Alliance</Link><span className="nav-underline"></span></li>
           </ul>
           <TextAlignRight 
             className="icon nav-collapse-btn nav-expand-btn" 
