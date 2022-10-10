@@ -43,6 +43,7 @@ export default function NavBar() {
             <li><HashLink className="nav-links" to="/#skills" onClick={handleClick}>Skills</HashLink><span className="nav-underline"></span></li>
             <li><HashLink className="nav-links" to="/#projects" onClick={handleClick}>Projects</HashLink><span className="nav-underline"></span></li>
             <li><HashLink className="nav-links" to="/#contact" onClick={handleClick}>Contact</HashLink><span className="nav-underline"></span></li>
+            <li><Link className="nav-links" to="/blog" onClick={handleClick}>Blog</Link><span className="nav-underline"></span></li>
             <li><Link className="nav-links" to="/webdevalliance" onClick={handleClick}>WebDev Alliance</Link><span className="nav-underline"></span></li>
           </ul>
           <TextAlignRight 
