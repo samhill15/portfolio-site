@@ -16,7 +16,7 @@ export default function Footer() {
           <a href="mailto:samhilliarddev@gmail.com">
             <Envelope className="icon icon-outlined" />
           </a>
-          <a target="_blank" rel="noreferrer" href={resume}>
+          <a target="_blank" rel="noopener noreferrer" href={resume}>
             <Paper className="icon icon-outlined" />
           </a>
         </div>

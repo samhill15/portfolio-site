@@ -52,10 +52,10 @@ export default function Contact() {
       };
 
       send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         emailData,
-        process.env.REACT_APP_PUBKEY
+        process.env.REACT_APP_EMAILJS_PUBKEY
       )
       .then((response) => {
         setDisplayMessage(true);
