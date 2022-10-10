@@ -4,6 +4,7 @@
 
 /* Blog component styling */
 .blog-post {
+    position: relative;
     justify-content: flex-start !important;
     gap: 2rem;
     padding: 1rem 0;
@@ -21,7 +22,7 @@
 
 .blog-title > a {
     text-decoration: none;
-    color: var(--main-font-color);
+    color: var(--main-heading-color);
 }
 
 .blog-title:hover > a {
@@ -38,4 +39,6 @@
 .blog-footer {
     display: flex;
     gap: 1rem;
+    position: absolute;
+    bottom: 0;
 }

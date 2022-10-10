@@ -6,11 +6,13 @@ import './Blog.css';
 export default function Blog() {
   return (
     <div className="container">
-        <h1>Welcome to my Blog!</h1>
-        <h5>
-            This is a space where I like to post quick tutorials, 
-            experiences I've had, or anything else I want to rant about.
-        </h5>
+        <div className="centered">
+            <h1>Welcome to my Blog!</h1>
+            <h5>
+                This is a space where I like to post quick tutorials, 
+                experiences I've had, or anything else I want to rant about.
+            </h5>
+        </div>
         
         <div className="blog-post-container">
             <BlogPost 
