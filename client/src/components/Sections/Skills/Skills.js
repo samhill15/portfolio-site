@@ -3,7 +3,7 @@ import SkillCard from '../../SkillCard/SkillCard'
 
 export default function Skills() {
   return (
-    <section className="skills">
+    <section className="skills centered">
         <h2 id="skills">Skills & Experience</h2>
         <div className="skills-container split">
           <div className="skill-cards-container">

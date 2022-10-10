@@ -1,9 +1,12 @@
+.blog-post-container {
+    padding: 4rem 0;
+}
 
 /* Blog component styling */
 .blog-post {
-    display: flex;
+    justify-content: flex-start !important;
     gap: 2rem;
-    margin-top: 1rem;
+    padding: 1rem 0;
 }
 
 .blog-img-container {
@@ -29,6 +32,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    width: 450px;
 }
 
 .blog-footer {

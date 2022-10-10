@@ -33,7 +33,7 @@ export default function Projects() {
   }, [bucket.objects]);
 
   return (
-    <section className="projects">
+    <section className="projects centered">
         <h2 id="projects">My Projects</h2>
 
         {projectData.map((project) => {

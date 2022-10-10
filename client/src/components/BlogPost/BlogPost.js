@@ -4,8 +4,8 @@ export default function BlogPost(props) {
   return (
     <div>
         <hr />
-        <div className="blog-post">
-            <div className="blog-img-container centered">
+        <div className="split blog-post">
+            <div className="centered blog-img-container">
                 <img src={props.img} alt={props.title} />
             </div>
             <div className="blog-details">
