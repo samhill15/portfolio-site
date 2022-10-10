@@ -1,0 +1,37 @@
+
+/* Blog component styling */
+.blog-post {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.blog-img-container {
+    height: 150px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.blog-img-container > img {
+    height: 100%;
+}
+
+.blog-title > a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+.blog-title:hover > a {
+    text-decoration: underline;
+}
+
+.blog-details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.blog-footer {
+    display: flex;
+    gap: 1rem;
+}

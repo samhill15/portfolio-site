@@ -1,0 +1,24 @@
+import React from 'react'
+
+export default function BlogPost(props) {
+  return (
+    <div>
+        <hr />
+        <div className="blog-post">
+            <div className="blog-img-container centered">
+                <img src={props.img} alt={props.title} />
+            </div>
+            <div className="blog-details">
+                <div className="blog-desc">
+                    <h3 className="blog-title"><a href={props.link}>{props.title}</a></h3>
+                    <p>{props.description}</p>
+                </div>
+                <div className="blog-footer">
+                    <p>{props.pubdate}</p>
+                    <p>{props.tags}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
