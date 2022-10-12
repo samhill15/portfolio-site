@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import getBlogPosts from '../../../hooks/utils/getBlogPosts'
+import { getBlogPosts } from '../../../hooks/utils/getBlogPosts'
 import BlogPost from '../../BlogPost/BlogPost'
 
 import './Blog.css';
