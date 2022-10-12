@@ -1,9 +1,34 @@
 import React from 'react'
-import BlogPost from '../../BlogPost/BlogPost';
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import Papa from 'papaparse'
+import BlogPost from '../../BlogPost/BlogPost'
 
 import './Blog.css';
 
 export default function Blog() {
+
+  const [posts, setPosts] = useState([]);
+
+  const parseSheets = () => new Promise((resolve) =>{
+    Papa.parse(process.env.REACT_APP_SHEETS_LINK, {
+      download: true,
+      header: true,
+      newline: '',
+      complete: (res, file) => {
+        resolve(res.data)
+      }
+    })
+  })
+
+  const getPosts = async () => {
+    return await parseSheets()
+  }
+
+  useEffect(() => {
+    getPosts().then(res => setPosts([...res]))
+  }, [])
+
   return (
     <div className="container">
         <div className="centered">
@@ -23,6 +48,8 @@ export default function Blog() {
                 description="A short introduction of what I'll write about in my blog and why I started it"
                 pubdate="Oct 10, 2022"
             />
+
+            {console.log(posts)}
         </div>
     </div>
   )

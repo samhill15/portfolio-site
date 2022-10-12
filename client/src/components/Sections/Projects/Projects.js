@@ -26,11 +26,10 @@ export default function Projects() {
     }
 
     fetchData().then((res) => {
-      console.log(res)
       setProjectData(res)
     })
 
-  }, [bucket.objects]);
+  }, []);
 
   return (
     <section className="projects centered">
