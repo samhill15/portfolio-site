@@ -10,7 +10,7 @@ export default function BlogPost(props) {
             </div>
             <div className="blog-details">
                 <div className="blog-desc">
-                    <h3 className="blog-title"><a href={props.link}>{props.title}</a></h3>
+                    <h3 className="blog-title"><a href={props.slug}>{props.title}</a></h3>
                     <p>{props.description}</p>
                 </div>
                 <div className="blog-footer">

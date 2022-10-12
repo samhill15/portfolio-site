@@ -40,16 +40,20 @@ export default function Blog() {
         </div>
         
         <div className="blog-post-container">
-            <BlogPost 
-                img="https://media.tenor.com/images/208511f15d4d0d9dd09337fbff051948/tenor.png"
-                title="My first post"
-                link="random"
-                tags="personal, opinion"
-                description="A short introduction of what I'll write about in my blog and why I started it"
-                pubdate="Oct 10, 2022"
-            />
 
-            {console.log(posts)}
+            {posts.map(post => {
+              return(
+                <BlogPost
+                  img={post.img}
+                  title={post.title}
+                  link={post.slug}
+                  tags={post.tags}
+                  description={post.description}
+                  pubdate={post.pupdate}
+                />
+              )
+            })}
+
         </div>
     </div>
   )
