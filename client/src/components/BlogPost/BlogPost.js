@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function BlogPost(props) {
   return (
@@ -10,7 +11,7 @@ export default function BlogPost(props) {
             </div>
             <div className="blog-details">
                 <div className="blog-desc">
-                    <h3 className="blog-title"><a href={props.slug}>{props.title}</a></h3>
+                    <h3 className="blog-title"><Link to={`${props.slug}`}>{props.title}</Link></h3>
                     <p>{props.description}</p>
                 </div>
                 <div className="blog-footer">

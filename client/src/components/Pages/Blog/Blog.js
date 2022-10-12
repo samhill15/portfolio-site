@@ -41,12 +41,14 @@ export default function Blog() {
         
         <div className="blog-post-container">
 
+
             {posts.map(post => {
               return(
                 <BlogPost
+                  key={post.slug}
                   img={post.img}
                   title={post.title}
-                  link={post.slug}
+                  slug={post.slug}
                   tags={post.tags}
                   description={post.description}
                   pubdate={post.pupdate}
