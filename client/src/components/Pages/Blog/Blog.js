@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import axios from 'axios'
-import Papa from 'papaparse'
+import getBlogPosts from '../../../hooks/utils/getBlogPosts'
 import BlogPost from '../../BlogPost/BlogPost'
 
 import './Blog.css';
@@ -10,23 +9,8 @@ export default function Blog() {
 
   const [posts, setPosts] = useState([]);
 
-  const parseSheets = () => new Promise((resolve) =>{
-    Papa.parse(process.env.REACT_APP_SHEETS_LINK, {
-      download: true,
-      header: true,
-      newline: '',
-      complete: (res, file) => {
-        resolve(res.data)
-      }
-    })
-  })
-
-  const getPosts = async () => {
-    return await parseSheets()
-  }
-
   useEffect(() => {
-    getPosts().then(res => setPosts([...res]))
+    getBlogPosts().then(res => setPosts([...res]))
   }, [])
 
   return (
