@@ -13,7 +13,7 @@ export default function Article() {
   })
 
   return (
-    <div className="container">
+    <div className="container2">
       <h1>{post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
     </div>

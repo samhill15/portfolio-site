@@ -9,8 +9,8 @@ export default function ProjectCard(props) {
             <div className="project-description" dangerouslySetInnerHTML={{__html: props.description}}></div>
         </div>
         <div className="project-links">
-            <a href={props.hostedURL}><LinkOut className="icon icon-outlined" /></a>
-            <a href={props.githubURL}><GithubFill className="icon" /></a>
+            <a href={props.hostedURL} target="_blank" rel="noreferrer"><LinkOut className="icon icon-outlined" /></a>
+            <a href={props.githubURL} target="_blank" rel="noreferrer"><GithubFill className="icon" /></a>
         </div>
     </div>
   )
