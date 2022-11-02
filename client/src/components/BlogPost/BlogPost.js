@@ -12,7 +12,7 @@ export default function BlogPost(props) {
             <div className="blog-details">
                 <div className="blog-desc">
                     <h3 className="blog-title"><Link to={`${props.slug}`}>{props.title}</Link></h3>
-                    <p>{props.description}</p>
+                    <p>{props.description.replace( /(<([^>]+)>)/ig, ' ')}</p>
                 </div>
                 <div className="blog-footer">
                     <p>{props.pubdate}</p>

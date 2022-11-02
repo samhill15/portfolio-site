@@ -34,7 +34,7 @@ export default function Blog() {
                   title={post.title}
                   slug={post.slug}
                   tags={post.tags}
-                  description={post.description}
+                  description={post.content}
                   pubdate={post.pupdate}
                 />
               )
