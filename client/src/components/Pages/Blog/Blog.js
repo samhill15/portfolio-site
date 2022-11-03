@@ -7,11 +7,17 @@ import './Blog.css';
 
 export default function Blog() {
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
     getBlogPosts().then(res => setPosts([...res]))
   }, [])
+
+  function formatDate(date) {
+    const dateObj = new Date(date)
+    let options = {year: 'numeric', month: 'long', day: 'numeric'}
+    return dateObj.toLocaleDateString("en-US", options)
+  }
 
   return (
     <div className="container">
@@ -35,7 +41,7 @@ export default function Blog() {
                   slug={post.slug}
                   tags={post.tags}
                   description={post.content}
-                  pubdate={post.pupdate}
+                  pubdate={formatDate(post.pubdate)}
                 />
               )
             })}
