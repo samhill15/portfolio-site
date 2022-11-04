@@ -36,9 +36,26 @@
     width: 450px;
 }
 
+.blog-desc {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .blog-footer {
     display: flex;
     gap: 1rem;
     position: absolute;
     bottom: 0;
+}
+
+/* Article component styling */
+
+.article-container {
+    width: 50rem !important;
+}
+
+.article-container h2, h3, h4, h5 {
+    margin-top: 20px;
 }

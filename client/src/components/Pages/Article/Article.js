@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getBlogPost } from '../../../hooks/utils/getBlogPosts'
 
+import '../Blog/Blog.css'
+
 export default function Article() {
 
   const { id } = useParams()
@@ -13,8 +15,7 @@ export default function Article() {
   })
 
   return (
-    <div className="container2">
-      <h1>{post.title}</h1>
+    <div className="container main-container article-container">
       <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
     </div>
   )

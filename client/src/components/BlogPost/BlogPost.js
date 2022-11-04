@@ -10,9 +10,9 @@ export default function BlogPost(props) {
                 <img src={props.img} alt={props.title} />
             </div>
             <div className="blog-details">
-                <div className="blog-desc">
+                <div className="blog-desc-container">
                     <h3 className="blog-title"><Link to={`${props.slug}`}>{props.title}</Link></h3>
-                    <p>{props.description.replace( /(<([^>]+)>)/ig, ' ')}</p>
+                    <p className="blog-desc">{props.description.replace( /(<([^>]+)>)/ig, ' ')}</p>
                 </div>
                 <div className="blog-footer">
                     <p>{props.pubdate}</p>
