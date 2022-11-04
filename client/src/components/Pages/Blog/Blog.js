@@ -31,7 +31,6 @@ export default function Blog() {
         
         <div className="blog-post-container">
 
-
             {posts.map(post => {
               return(
                 <BlogPost

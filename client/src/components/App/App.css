@@ -357,6 +357,12 @@ header {
 
 /* Projects Section */
 
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .project-card {
     border: 1px solid var(--main-font-color);
     border-radius: 5px;
