@@ -2,13 +2,21 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { getBlogPosts } from '../../../hooks/utils/getBlogPosts'
 import BlogPost from '../../BlogPost/BlogPost'
+import LoadingAnimation from '../../LoadingAnimation/LoadingAnimation'
 
 export default function Blog() {
 
   const [posts, setPosts] = useState([])
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getBlogPosts().then(res => setPosts([...res]))
+    setLoading(true)
+    getBlogPosts().then(res => {
+      setPosts([...res])
+      setLoading(false)
+    }).catch(e => {
+      setLoading(false)
+    })
   }, [])
 
   function formatDate(date) {
@@ -26,8 +34,9 @@ export default function Blog() {
                 experiences I've had, or anything else I want to rant about.
             </h5>
         </div>
-        
-        <div className="blog-post-container">
+
+        {loading && <LoadingAnimation />}
+        {!loading &&<div className="blog-post-container">
 
             {posts.map(post => {
               return(
@@ -43,7 +52,7 @@ export default function Blog() {
               )
             })}
 
-        </div>
+        </div>}
     </div>
   )
 }
