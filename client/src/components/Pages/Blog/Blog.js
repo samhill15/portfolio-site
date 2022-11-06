@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import { getBlogPosts } from '../../../hooks/utils/getBlogPosts'
 import BlogPost from '../../BlogPost/BlogPost'
 
-import './Blog.css';
-
 export default function Blog() {
 
   const [posts, setPosts] = useState([])

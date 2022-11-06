@@ -5,8 +5,6 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import {ChevronUp} from 'akar-icons';
 
-import './WebDevAlliance.css';
-
 export default function WebDevAlliance() {
   return (
     <div className="container job-container">

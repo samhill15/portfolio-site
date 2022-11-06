@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getBlogPost } from '../../../hooks/utils/getBlogPosts'
 
-import '../Blog/Blog.css'
-
 export default function Article() {
 
   const { id } = useParams()
