@@ -25,7 +25,9 @@ const parseSheetsById = (id) => new Promise((resolve) => {
 })
 
 const getBlogPosts = async () => {
-  return await parseSheets()
+  const posts = await parseSheets()
+  posts.reverse()
+  return posts
 }
 
 const getBlogPost = async (id) => {
