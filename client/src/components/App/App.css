@@ -75,9 +75,15 @@ h2 {
     margin-bottom: 2rem;
 }
 
-h3 {font-size: 1.953rem;}
+h3 {
+    font-size: 1.953rem;
+    margin-bottom: 0.75rem;
+}
 
-h4 {font-size: 1.563rem;}
+h4 {
+    font-size: 1.563rem;
+    margin-bottom: 0.75rem;
+}
 
 h5 {
     font-size: 1.25rem;
@@ -591,6 +597,14 @@ footer {
     margin-top: 20px;
 }
 
+.article-container ol {
+    padding: 1rem 2rem;
+}
+
+.article-container ol li {
+    margin-bottom: 1rem;
+}
+
 /* Loading animation */
 
 .lds-dual-ring {
@@ -616,4 +630,16 @@ footer {
       transform: rotate(360deg);
     }
   }
-  
+
+  code {
+    background-color: #353b48;
+    color: #f5f6fa;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  pre code {
+    display: block;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
