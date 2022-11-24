@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { useParams, HashLink } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getBlogPost } from '../../../hooks/utils/getBlogPosts'
 import LoadingAnimation from '../../LoadingAnimation/LoadingAnimation'
 

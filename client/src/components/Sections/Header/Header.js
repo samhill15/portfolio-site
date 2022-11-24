@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink } from 'react-router-hash-link'
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
             <h1>Web Developer</h1>
             <h3>Security Enthusiast</h3>
           </div>
-          <a className="btn header-btn" href="#contact">Message Me</a>
+          <HashLink className="btn header-btn" to="/#contact">Message Me</HashLink>
       </div>
     </header>
   )

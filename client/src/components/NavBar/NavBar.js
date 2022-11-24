@@ -36,7 +36,7 @@ export default function NavBar() {
   return (
     <nav className="navbar">
         <div className="container">
-          <Link href="/" className="logo">SH</Link>
+          <Link to="/" className="logo">SH</Link>
           <ul className={"nav-items" + (navItemsActive ? " nav-items-active" : "")}>
             <li><Link className="nav-links" to="/" onClick={handleClick}>Home</Link><span className="nav-underline"></span></li>
             <li><HashLink className="nav-links" to="/#about" onClick={handleClick}>About</HashLink><span className="nav-underline"></span></li>
@@ -44,7 +44,6 @@ export default function NavBar() {
             <li><HashLink className="nav-links" to="/#projects" onClick={handleClick}>Projects</HashLink><span className="nav-underline"></span></li>
             <li><HashLink className="nav-links" to="/#contact" onClick={handleClick}>Contact</HashLink><span className="nav-underline"></span></li>
             <li><Link className="nav-links" to="/blog" onClick={handleClick}>Blog</Link><span className="nav-underline"></span></li>
-            <li><Link className="nav-links" to="/webdevalliance" onClick={handleClick}>WebDev Alliance</Link><span className="nav-underline"></span></li>
           </ul>
           <TextAlignRight 
             className="icon nav-collapse-btn nav-expand-btn" 
