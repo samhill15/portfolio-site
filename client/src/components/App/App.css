@@ -632,14 +632,19 @@ footer {
   }
 
   code {
-    background-color: #353b48;
-    color: #f5f6fa;
-    padding: 5px;
-    border-radius: 5px;
+    --bg-color: hsl(221, 15%, 25%);
+    --font-color: hsl(228, 33%, 97%);
+
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    padding: 2.5px;
+    border-radius: 3.5px;
+    font-size: 0.9rem;
   }
 
   pre code {
     display: block;
     padding: 2rem 1.5rem;
     margin-bottom: 2rem;
+    overflow-x: scroll;
   }
